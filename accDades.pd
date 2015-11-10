@@ -1,4 +1,4 @@
-#N canvas 15 23 450 300 10;
+#N canvas 19 23 450 300 10;
 #X obj 131 55 counter;
 #X obj 131 89 % 3;
 #X obj 131 127 sel 2;
@@ -13,7 +13,7 @@
 #X obj 267 90 inlet;
 #X obj 206 61 inlet;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array array2 100 float 3;
+#X array valors1 100 float 3;
 #A 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
