@@ -1,4 +1,4 @@
-#N canvas 167 190 450 300 10;
+#N canvas 167 190 608 493 10;
 #X obj 314 37 loadbang;
 #X obj 314 255 rebreBT;
 #X text 94 30 1;
@@ -12,7 +12,7 @@
 1;
 #X obj 160 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 192 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 192 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 226 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -31,7 +31,13 @@
 0 1;
 #X obj 138 177 tgl 15 0 color5 filtre5 empty 17 7 0 10 -262144 -1 -1
 0 1;
-#X text -65 119 activar filtre a posició - kikube:;
+#X text -59 119 activar filtre a posició - kikube:;
+#X text -55 222 obrir cançons;
+#X text -49 278 PLAY cançons ************** i començar joc!;
+#X obj 36 224 bng 15 250 50 0 opensongs empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 63 300 bng 15 250 50 0 playsongs empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 1 0;
 #X connect 7 0 1 1;
 #X connect 8 0 1 2;
