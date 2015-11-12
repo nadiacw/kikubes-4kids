@@ -12,10 +12,11 @@
 1;
 #X obj 160 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 192 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 192 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 226 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
+#X obj 98 203 activar-filtre;
 #X connect 0 0 1 0;
 #X connect 7 0 1 1;
 #X connect 8 0 1 2;
