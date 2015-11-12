@@ -12,11 +12,26 @@
 1;
 #X obj 160 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 192 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 192 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 226 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 98 203 activar-filtre;
+#X text 6 157 1;
+#X text 42 157 2;
+#X text 76 157 3;
+#X text 108 157 4;
+#X text 142 157 5;
+#X obj 2 177 tgl 15 0 color1 filtre1 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 38 177 tgl 15 0 color2 filtre2 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 72 177 tgl 15 0 color3 filtre3 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 104 177 tgl 15 0 color4 filtre4 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 138 177 tgl 15 0 color5 filtre5 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text -65 119 activar filtre a posició - kikube:;
 #X connect 0 0 1 0;
 #X connect 7 0 1 1;
 #X connect 8 0 1 2;
