@@ -13,7 +13,7 @@
 #X msg 359 -175 0;
 #X obj 352 -223 sel 0 1;
 #X obj 352 -248 tgl 15 0 empty color2 empty 17 7 0 10 -262144 -1 -1
-0 1;
+2 2;
 #X text 278 -132 filtre on/off;
 #X obj 305 -296 inlet;
 #X text 343 -296 loadbang;
@@ -53,13 +53,13 @@
 -1 -1;
 #X obj 835 -215 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 99 -178 stop;
+#X msg 113 -161 stop;
 #X obj 128 -278 bng 15 250 50 0 empty opensongs empty 17 7 0 10 -262144
 -1 -1;
 #X obj 161 -277 bng 15 250 50 0 empty playsongs empty 17 7 0 10 -262144
 -1 -1;
 #X msg 128 -248 open flute.wav;
-#N canvas 695 360 450 300 map2 0;
+#N canvas 695 360 450 300 map2 1;
 #N canvas 540 162 450 300 map 0;
 #X obj 77 68 inlet;
 #X obj 126 67 inlet;
@@ -192,11 +192,11 @@
 #X obj -933 -265 outlet;
 #X obj -889 -265 outlet;
 #X msg -973 -379 1;
-#X msg -946 -379 30;
 #X msg -854 -379 0;
 #X msg -827 -379 127;
 #X msg -737 -379 0;
 #X msg -710 -379 127;
+#X msg -946 -379 10;
 #X connect 0 0 3 0;
 #X connect 1 0 0 1;
 #X connect 2 0 0 2;
@@ -215,21 +215,21 @@
 #X connect 15 0 5 0;
 #X connect 15 0 6 0;
 #X connect 15 0 20 0;
-#X connect 15 0 21 0;
+#X connect 15 0 25 0;
 #X connect 15 0 1 0;
 #X connect 15 0 2 0;
+#X connect 15 0 21 0;
 #X connect 15 0 22 0;
-#X connect 15 0 23 0;
 #X connect 15 0 9 0;
 #X connect 15 0 10 0;
+#X connect 15 0 23 0;
 #X connect 15 0 24 0;
-#X connect 15 0 25 0;
 #X connect 20 0 4 3;
-#X connect 21 0 4 4;
-#X connect 22 0 0 3;
-#X connect 23 0 0 4;
-#X connect 24 0 8 3;
-#X connect 25 0 8 4;
+#X connect 21 0 0 3;
+#X connect 22 0 0 4;
+#X connect 23 0 8 3;
+#X connect 24 0 8 4;
+#X connect 25 0 4 4;
 #X restore 262 30 pd map2;
 #X obj 206 114 pitchshifter;
 #X floatatom 316 72 5 0 0 0 - - -;
@@ -252,6 +252,8 @@
 #X msg 666 -139 120;
 #X msg 780 -141 120;
 #X msg 815 -140 244;
+#X obj 91 -174 bng 15 250 50 0 empty stopsong empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 18 0;
 #X connect 1 0 20 0;
 #X connect 2 0 22 0;
@@ -345,3 +347,4 @@
 #X connect 70 0 29 1;
 #X connect 71 0 29 1;
 #X connect 72 0 30 1;
+#X connect 73 0 47 0;

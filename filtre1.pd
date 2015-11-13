@@ -250,6 +250,8 @@
 #X connect 24 0 4 3;
 #X connect 25 0 0 4;
 #X restore 302 51 pd map1;
+#X obj 81 -184 bng 15 250 50 0 empty stopsong empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 18 0;
 #X connect 1 0 20 0;
 #X connect 2 0 22 0;
@@ -341,3 +343,4 @@
 #X connect 70 0 69 2;
 #X connect 70 1 69 3;
 #X connect 70 2 69 4;
+#X connect 71 0 47 0;

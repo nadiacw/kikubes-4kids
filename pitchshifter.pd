@@ -37,26 +37,7 @@
 #X text 146 258 change;
 #X text 346 192 <--window (msec);
 #X text 119 333 tape head;
-#X text 490 234 This is a classic rotating-tape-head style pitch shifter
-using the vd~ variable delay object. Ther are two moving tape heads
-\, each of which is loudest at the middle of its trajectory \, and
-enveloped out at the moment it has to jump back (or forward) to start
-another scratch. Most of the brain work is in computing how fast the
-tape heads have to move to get the desired transposition.;
-#X text 490 353 The "window size" is the total trajectory of the read
-points in the delay line \, in milliseconds. The delay times are controlled
-by a phasor~ object. The second delay time \, 180 degrees out of phase
-from the first one \, is computed using the "wrap" object.;
-#X text 488 443 The "window size" is the total trajectory of the read
-points in the delay line \, in milliseconds. The delay times are controlled
-by a phasor~ object. The second delay time \, 180 degrees out of phase
-from the first one \, is computed using the "wrap" object.;
-#X text 487 535 The cos~ objects compute the fadein and fadeout of
-the two delay line outputs. They each traverse the positive half of
-the cosine waveform (phase -0.25 to +0.25) over the time the phase
-goes from one end to the other.;
 #X obj 84 397 phasor~;
-#X text 754 615 updated for Pd version 0.37-1;
 #X obj 379 397 max 1.5;
 #X text 382 303 delay;
 #X text 379 321 (msec);
@@ -65,24 +46,33 @@ goes from one end to the other.;
 #X obj 147 491 vd~ G09-del;
 #X obj 316 503 vd~ G09-del;
 #X obj 62 56 delwrite~ G09-del 5000;
-#X obj 87 133 hsl 128 15 1 30 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 149 1;
+#X obj 87 133 hsl 128 15 1 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6425 1;
 #X obj 305 164 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 249 1;
+-1 -1 6574 1;
 #X obj 385 340 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 1693 1;
 #X obj 358 34 inlet;
 #X obj 440 34 inlet;
 #X obj 526 34 inlet;
 #X obj 62 28 inlet~;
 #X obj 234 28 inlet;
-#X obj 128 630 dac~;
-#X obj 139 578 *~;
+#X obj 130 653 dac~;
+#X obj 136 586 *~;
+#X obj 135 617 *~ 1;
+#X obj 404 526 sel 0 1;
+#X floatatom 460 559 5 0 0 0 - - -;
+#X msg 475 471 5;
+#X floatatom 383 630 5 0 0 0 - - -;
+#X obj 372 602 line;
+#X msg 361 563 set 1;
+#X obj 459 525 r color2;
+#X msg 411 571 7 2000;
 #X connect 0 0 30 0;
 #X connect 1 0 13 0;
 #X connect 2 0 1 1;
 #X connect 2 0 18 1;
-#X connect 3 0 47 0;
+#X connect 3 0 42 0;
 #X connect 5 0 2 0;
 #X connect 6 0 7 0;
 #X connect 7 0 29 0;
@@ -91,20 +81,20 @@ goes from one end to the other.;
 #X connect 10 0 13 1;
 #X connect 10 0 19 1;
 #X connect 11 0 10 0;
-#X connect 12 0 44 0;
-#X connect 13 0 49 0;
+#X connect 12 0 39 0;
+#X connect 13 0 44 0;
 #X connect 14 0 15 0;
 #X connect 15 0 16 0;
-#X connect 16 0 61 0;
+#X connect 16 0 56 0;
 #X connect 17 0 18 0;
 #X connect 17 0 27 0;
 #X connect 18 0 19 0;
-#X connect 19 0 50 0;
+#X connect 19 0 45 0;
 #X connect 20 0 21 0;
 #X connect 21 0 16 1;
 #X connect 22 0 8 0;
 #X connect 22 1 8 1;
-#X connect 23 0 42 0;
+#X connect 23 0 38 0;
 #X connect 24 0 17 0;
 #X connect 25 0 26 0;
 #X connect 26 0 14 0;
@@ -113,21 +103,31 @@ goes from one end to the other.;
 #X connect 29 0 31 0;
 #X connect 30 0 6 0;
 #X connect 31 0 8 0;
-#X connect 42 0 1 0;
-#X connect 42 0 25 0;
-#X connect 42 0 24 0;
-#X connect 44 0 11 0;
-#X connect 47 0 9 0;
-#X connect 47 0 5 0;
-#X connect 49 0 15 1;
-#X connect 50 0 21 1;
-#X connect 52 0 0 0;
-#X connect 53 0 3 0;
-#X connect 54 0 12 0;
-#X connect 55 0 52 0;
-#X connect 56 0 53 0;
-#X connect 57 0 54 0;
-#X connect 58 0 51 0;
-#X connect 59 0 61 1;
-#X connect 61 0 60 0;
-#X connect 61 0 60 1;
+#X connect 38 0 1 0;
+#X connect 38 0 25 0;
+#X connect 38 0 24 0;
+#X connect 39 0 11 0;
+#X connect 42 0 9 0;
+#X connect 42 0 5 0;
+#X connect 44 0 15 1;
+#X connect 45 0 21 1;
+#X connect 47 0 0 0;
+#X connect 48 0 3 0;
+#X connect 49 0 12 0;
+#X connect 50 0 47 0;
+#X connect 51 0 48 0;
+#X connect 52 0 49 0;
+#X connect 53 0 46 0;
+#X connect 54 0 56 1;
+#X connect 56 0 57 0;
+#X connect 57 0 55 0;
+#X connect 57 0 55 1;
+#X connect 58 0 63 0;
+#X connect 58 1 60 0;
+#X connect 58 1 65 0;
+#X connect 62 0 61 0;
+#X connect 62 0 57 1;
+#X connect 63 0 62 0;
+#X connect 64 0 58 0;
+#X connect 64 0 59 0;
+#X connect 65 0 62 0;

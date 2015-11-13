@@ -250,6 +250,8 @@
 #X msg 158 -59 open drums.wav;
 #X msg 548 104 0;
 #X obj 291 232 delaydrums;
+#X obj 70 -79 bng 15 250 50 0 empty stopsong empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 18 0;
 #X connect 1 0 20 0;
 #X connect 2 0 22 0;
@@ -339,3 +341,4 @@
 #X connect 67 0 6 0;
 #X connect 68 0 4 0;
 #X connect 69 0 27 0;
+#X connect 71 0 63 0;

@@ -15,7 +15,7 @@
 #X obj 347 -78 tgl 15 0 empty color4 empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X text 273 38 filtre on/off;
-#N canvas 349 146 450 300 map4 1;
+#N canvas 349 146 450 300 map4 0;
 #N canvas 540 162 450 300 map 0;
 #X obj 77 68 inlet;
 #X obj 126 67 inlet;
@@ -152,7 +152,7 @@
 #X obj -1024 -304 outlet;
 #X obj -980 -304 outlet;
 #X obj -936 -304 outlet;
-#X msg -993 -418 20;
+#X msg -993 -418 127;
 #X connect 0 0 3 0;
 #X connect 1 0 0 1;
 #X connect 2 0 0 2;
@@ -251,6 +251,8 @@
 #X obj 156 -107 bng 15 250 50 0 empty playsongs empty 17 7 0 10 -262144
 -1 -1;
 #X msg 123 -78 open guitar.wav;
+#X obj 80 -20 bng 15 250 50 0 empty stopsong empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 20 0;
 #X connect 1 0 22 0;
 #X connect 2 0 24 0;
@@ -342,3 +344,4 @@
 #X connect 68 0 70 0;
 #X connect 69 0 6 0;
 #X connect 70 0 4 0;
+#X connect 71 0 67 0;

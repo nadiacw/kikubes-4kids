@@ -13,7 +13,7 @@
 #X msg 366 5 0;
 #X obj 357 -43 sel 0 1;
 #X obj 357 -68 tgl 15 0 empty color5 empty 17 7 0 10 -262144 -1 -1
-0 1;
+2 2;
 #X text 283 48 filtre on/off;
 #X obj 310 -116 inlet;
 #X text 348 -116 loadbang;
@@ -251,6 +251,8 @@
 #X connect 25 0 8 4;
 #X restore 300 233 pd map5;
 #X obj 238 318 pitchshifter-marimba;
+#X obj 92 -5 bng 15 250 50 0 empty stopsong empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 18 0;
 #X connect 1 0 20 0;
 #X connect 2 0 22 0;
@@ -342,3 +344,4 @@
 #X connect 69 0 70 2;
 #X connect 69 1 70 3;
 #X connect 69 2 70 4;
+#X connect 71 0 49 0;
