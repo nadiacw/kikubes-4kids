@@ -1,0 +1,133 @@
+#N canvas 0 22 1076 712 10;
+#X floatatom 84 168 0 0 0 0 - - -;
+#X obj 147 439 *~;
+#X obj 270 376 line~;
+#X floatatom 302 193 0 0 0 0 - - -;
+#X text 133 90 PITCH SHIFTER;
+#X obj 270 350 pack 0 200;
+#X obj 84 224 exp;
+#X floatatom 84 250 6 0 0 0 - - -;
+#X obj 84 340 /;
+#X obj 211 270 * 0.001;
+#X obj 379 446 line~;
+#X obj 379 421 pack 0 200;
+#X floatatom 379 370 0 0 0 0 - - -;
+#X obj 147 465 +~;
+#X obj 84 491 cos~;
+#X obj 84 518 *~;
+#X obj 84 547 +~;
+#X obj 171 398 wrap~;
+#X obj 316 441 *~;
+#X obj 316 474 +~;
+#X obj 253 501 cos~;
+#X obj 253 528 *~;
+#X obj 211 297 t b f;
+#X floatatom 84 366 6 0 0 0 - - -;
+#X obj 171 371 +~ 0.5;
+#X obj 84 439 -~ 0.5;
+#X obj 84 465 *~ 0.5;
+#X obj 253 440 -~ 0.5;
+#X obj 253 473 *~ 0.5;
+#X obj 84 277 - 1;
+#X obj 84 198 * 0.05776;
+#X obj 84 303 * -1;
+#X text 118 167 <-- transposition;
+#X text 161 180 (halftones);
+#X text 147 244 speed;
+#X text 146 258 change;
+#X text 346 192 <--window (msec);
+#X text 119 333 tape head;
+#X text 490 234 This is a classic rotating-tape-head style pitch shifter
+using the vd~ variable delay object. Ther are two moving tape heads
+\, each of which is loudest at the middle of its trajectory \, and
+enveloped out at the moment it has to jump back (or forward) to start
+another scratch. Most of the brain work is in computing how fast the
+tape heads have to move to get the desired transposition.;
+#X text 490 353 The "window size" is the total trajectory of the read
+points in the delay line \, in milliseconds. The delay times are controlled
+by a phasor~ object. The second delay time \, 180 degrees out of phase
+from the first one \, is computed using the "wrap" object.;
+#X text 488 443 The "window size" is the total trajectory of the read
+points in the delay line \, in milliseconds. The delay times are controlled
+by a phasor~ object. The second delay time \, 180 degrees out of phase
+from the first one \, is computed using the "wrap" object.;
+#X text 487 535 The cos~ objects compute the fadein and fadeout of
+the two delay line outputs. They each traverse the positive half of
+the cosine waveform (phase -0.25 to +0.25) over the time the phase
+goes from one end to the other.;
+#X obj 84 397 phasor~;
+#X text 754 615 updated for Pd version 0.37-1;
+#X obj 379 397 max 1.5;
+#X text 382 303 delay;
+#X text 379 321 (msec);
+#X obj 302 220 max 1;
+#X text 120 346 rotation freq;
+#X obj 87 133 hsl 128 15 1 30 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 305 164 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 385 340 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 358 34 inlet;
+#X obj 440 34 inlet;
+#X obj 526 34 inlet;
+#X obj 62 28 inlet~;
+#X obj 234 28 inlet;
+#X obj 128 630 dac~;
+#X obj 139 578 *~;
+#X obj 62 56 delwrite~ G09-del2 5000;
+#X obj 147 491 vd~ G09-del2;
+#X obj 316 503 vd~ G09-del2;
+#X connect 0 0 30 0;
+#X connect 1 0 13 0;
+#X connect 2 0 1 1;
+#X connect 2 0 18 1;
+#X connect 3 0 47 0;
+#X connect 5 0 2 0;
+#X connect 6 0 7 0;
+#X connect 7 0 29 0;
+#X connect 8 0 23 0;
+#X connect 9 0 22 0;
+#X connect 10 0 13 1;
+#X connect 10 0 19 1;
+#X connect 11 0 10 0;
+#X connect 12 0 44 0;
+#X connect 13 0 60 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 58 0;
+#X connect 17 0 18 0;
+#X connect 17 0 27 0;
+#X connect 18 0 19 0;
+#X connect 19 0 61 0;
+#X connect 20 0 21 0;
+#X connect 21 0 16 1;
+#X connect 22 0 8 0;
+#X connect 22 1 8 1;
+#X connect 23 0 42 0;
+#X connect 24 0 17 0;
+#X connect 25 0 26 0;
+#X connect 26 0 14 0;
+#X connect 27 0 28 0;
+#X connect 28 0 20 0;
+#X connect 29 0 31 0;
+#X connect 30 0 6 0;
+#X connect 31 0 8 0;
+#X connect 42 0 1 0;
+#X connect 42 0 25 0;
+#X connect 42 0 24 0;
+#X connect 44 0 11 0;
+#X connect 47 0 9 0;
+#X connect 47 0 5 0;
+#X connect 49 0 0 0;
+#X connect 50 0 3 0;
+#X connect 51 0 12 0;
+#X connect 52 0 49 0;
+#X connect 53 0 50 0;
+#X connect 54 0 51 0;
+#X connect 55 0 59 0;
+#X connect 56 0 58 1;
+#X connect 58 0 57 0;
+#X connect 58 0 57 1;
+#X connect 60 0 15 1;
+#X connect 61 0 21 1;

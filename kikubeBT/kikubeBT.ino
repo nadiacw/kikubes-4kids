@@ -101,7 +101,7 @@ void loop(){
     colorWipe(strip.Color(120, 0, 120), 50);
     }
     if(value == 'B'){
-    rainbowCycle(50);
+    rainbowCycle(5);
     }
   }
 }    
