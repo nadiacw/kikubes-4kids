@@ -7,7 +7,7 @@
 #X obj 298 238 *~ 1500;
 #X obj 391 254 -;
 #X obj 428 219 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2689 1;
+-1 -1 1395 1;
 #X floatatom 416 271 5 0 0 0 - - -;
 #X obj 299 268 +~ 200;
 #X obj 41 384 vcf~;
@@ -19,7 +19,7 @@
 #X obj 108 62 *~ 0.5;
 #X obj 107 20 osc~ 2;
 #X obj 209 97 hsl 128 15 700 6000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 946 1;
+-262144 -1 -1 5927 1;
 #X obj 163 170 hsl 128 15 0 700 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X floatatom 160 189 6 0 0 0 - - -;
@@ -33,7 +33,7 @@
 #X text 296 167 <-- Minimum of the freq. range;
 #X text 169 320 <-- "Q";
 #X obj 167 -9 hsl 128 15 0.5 30 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 149 1;
+-1 -1 6126 1;
 #X obj 204 221 loadbang;
 #X obj 10 -12 inlet~;
 #X obj 101 -13 inlet;
@@ -51,8 +51,8 @@
 #X floatatom 269 438 5 0 0 0 - - -;
 #X obj 258 410 line;
 #X msg 247 371 set 1;
-#X msg 297 379 10 2000;
 #X obj 345 333 r color4;
+#X msg 297 379 15 2000;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -93,10 +93,10 @@
 #X connect 39 0 12 0;
 #X connect 40 0 45 0;
 #X connect 40 1 42 0;
-#X connect 40 1 46 0;
+#X connect 40 1 47 0;
 #X connect 44 0 43 0;
 #X connect 44 0 38 1;
 #X connect 45 0 44 0;
-#X connect 46 0 44 0;
-#X connect 47 0 40 0;
-#X connect 47 0 41 0;
+#X connect 46 0 40 0;
+#X connect 46 0 41 0;
+#X connect 47 0 44 0;

@@ -8,16 +8,16 @@
 #X obj 105 200 *~;
 #X obj 254 22 inlet;
 #X obj 212 55 hsl 128 15 1 0.1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 598 1;
+-1 -1 797 1;
 #X obj 294 163 sel 0 1;
 #X floatatom 350 196 5 0 0 0 - - -;
 #X obj 171 245 *~ 1;
 #X obj 349 162 r color3;
 #X msg 365 108 5;
-#X msg 301 208 5 2000;
 #X floatatom 273 267 5 0 0 0 - - -;
 #X obj 262 239 line;
 #X msg 251 200 set 1;
+#X msg 301 208 3 2000;
 #X connect 1 0 2 0;
 #X connect 1 0 6 0;
 #X connect 2 0 0 0;
@@ -26,14 +26,14 @@
 #X connect 6 0 11 0;
 #X connect 7 0 8 0;
 #X connect 8 0 2 1;
-#X connect 9 0 17 0;
+#X connect 9 0 16 0;
 #X connect 9 1 13 0;
-#X connect 9 1 14 0;
+#X connect 9 1 17 0;
 #X connect 11 0 3 0;
 #X connect 11 0 3 1;
 #X connect 12 0 9 0;
 #X connect 12 0 10 0;
-#X connect 14 0 16 0;
-#X connect 16 0 11 1;
+#X connect 15 0 11 1;
+#X connect 15 0 14 0;
 #X connect 16 0 15 0;
-#X connect 17 0 16 0;
+#X connect 17 0 15 0;
